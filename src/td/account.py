@@ -169,7 +169,7 @@ class MapData(BaseObject):  # nocov
                 # map.stream >> (Window::Theme::IsNightMode()
                 #     ? legacyBackgroundKeyNight
                 #     : legacyBackgroundKeyDay);
-                map.stream >> legacyBackgroundKeyDay
+                legacyBackgroundKeyDay = map.stream.readUInt64()
 
             elif keyType == lskType.lskBackgroundOld:
                 legacyBackgroundKeyDay = map.stream.readUInt64()
